@@ -1,5 +1,6 @@
 import com.snowplowanalytics.snowplow.tracker.DevicePlatform;
 import com.snowplowanalytics.snowplow.tracker.Tracker;
+import com.snowplowanalytics.snowplow.tracker.emitter.BatchEmitter;
 import com.snowplowanalytics.snowplow.tracker.emitter.Emitter;
 import com.snowplowanalytics.snowplow.tracker.emitter.RequestCallback;
 import com.snowplowanalytics.snowplow.tracker.emitter.SimpleEmitter;
@@ -50,13 +51,14 @@ public class ReportMetric {
             }
         };
 
-        Emitter simpleEmitter = SimpleEmitter.builder()
+        Emitter batchEmitter = BatchEmitter.builder()
                 .httpClientAdapter(adapter) // Required
                 .threadCount(20) // Default is 50
                 .requestCallback(callback)
+                .bufferSize(1)
                 .build();
 
-        Tracker tracker1 = new Tracker.TrackerBuilder(simpleEmitter, "tracker", appId)
+        Tracker tracker1 = new Tracker.TrackerBuilder(batchEmitter, "tracker", appId)
                 .platform(platform)
                 .build();
 

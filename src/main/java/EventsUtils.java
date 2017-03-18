@@ -1,7 +1,5 @@
-import com.snowplowanalytics.snowplow.tracker.Constants;
 import com.snowplowanalytics.snowplow.tracker.events.Unstructured;
 import com.snowplowanalytics.snowplow.tracker.payload.SelfDescribingJson;
-import javafx.scene.paint.Stop;
 
 import java.util.HashMap;
 import java.util.Map;

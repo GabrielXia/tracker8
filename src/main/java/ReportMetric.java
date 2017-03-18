@@ -58,10 +58,10 @@ public class ReportMetric {
                 .bufferSize(1)
                 .build();
 
-        Tracker tracker1 = new Tracker.TrackerBuilder(batchEmitter, "tracker", appId)
+        Tracker tracker = new Tracker.TrackerBuilder(batchEmitter, "tracker", appId)
                 .platform(platform)
                 .build();
 
-        tracker1.track(event);
+        tracker.track(event);
     }
 }

@@ -9,7 +9,7 @@ import java.util.Map;
  */
 public class EventsUtils {
 
-    static final public String SCHEMA_OS = "iglu:org.terasology.telemetry/os/jsonschema/1-0-0";
+    static final public String SCHEMA_OS = "iglu:org.terasology/os/jsonschema/1-0-0";
 
     static public Unstructured getOsEvent() {
 

@@ -32,7 +32,7 @@ Here is some information collected by the telemetry system (in the server)
 ### Development in Terasology telemetry system
 Goals in mind :
 - ****Users can disable all the metric tracking functions!****
-- The telemetry system should change code in terasology as little as possible
+- The telemetry system should change the code in terasology as little as possible
 - This system could also be used for terasology mobile version as well as DestinationSol
 
 
@@ -46,7 +46,7 @@ Implementation:
 ![](pictures/client.jpg)
 
 ### Some ideas
-The user might also want to see some data graph, I think this system can be set up locally very easy. Then we can see data graph in the browser
+The user might also want to see some data graph. This system can be set up locally very easy. After it's been set up locally, we can then see data graph in the browser.
 
 ### Welcome comments !
 Feel free to leave comments in [issue](https://github.com/GabrielXia/tracker8/issues) or in [forum](http://forum.terasology.org/threads/telemetry-system-collect-analyze-and-report.1799/), thanks :-)

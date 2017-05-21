@@ -1,7 +1,7 @@
 import org.slf4j.LoggerFactory;
 
 /**
- * Created by XIAJin on 2017/3/24.
+ * This is an example of a logback client sending log to the telemetry system.
  */
 public class LogstashTest {
 

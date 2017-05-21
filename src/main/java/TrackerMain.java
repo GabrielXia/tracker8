@@ -4,13 +4,14 @@ import com.snowplowanalytics.snowplow.tracker.events.PageView;
 import com.snowplowanalytics.snowplow.tracker.events.ScreenView;
 
 /**
+ * This is an client example tracking metric and sending them to the telemetry system
  */
-public class trackerMain {
+public class TrackerMain {
 
     public static void main(String[] args) {
 
-        // for now the collectorUrl runs on AWS
-        String collectorUrl = "http://localhost:8000";
+        // For now the collectorUrl runs on a docker container
+        String collectorUrl = "http://localhost:8080";
 
         Event osEvent = EventsUtils.getOsEvent();
 
@@ -25,6 +26,12 @@ public class trackerMain {
                 .name("name")
                 .build();
 
+        ReportMetric.reportMetric(collectorUrl, "terasology", DevicePlatform.Desktop, screenEvent);
         ReportMetric.reportMetric(collectorUrl, "terasology", DevicePlatform.Desktop, pageView);
+
+        //if osEvent is not registered, this is a bad event in Elasticsearch
+        ReportMetric.reportMetric(collectorUrl, "terasology", DevicePlatform.Desktop, osEvent);
+
+
     }
 }

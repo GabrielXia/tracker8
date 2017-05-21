@@ -1,4 +1,5 @@
 # tracker 8
+
 An easy example of using [snowplow-java-tracker](https://github.com/snowplow/snowplow-java-tracker)
 ### Overview
 - This is one part of telemetry system (the only one runs on the client part), the rest will run on the server
@@ -44,9 +45,6 @@ Implementation:
     - Using Logback appender to send `error` or `warn` logs to the server  
 - The other work should to be done in the server 
 ![](pictures/client.jpg)
-
-### Some ideas
-The user might also want to see some data graph. This system can be set up locally very easy. After it's been set up locally, we can then see data graph in the browser.
 
 ### Welcome comments !
 Feel free to leave comments in [issue](https://github.com/GabrielXia/tracker8/issues) or in [forum](http://forum.terasology.org/threads/telemetry-system-collect-analyze-and-report.1799/), thanks :-)

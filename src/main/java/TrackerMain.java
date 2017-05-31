@@ -11,7 +11,7 @@ public class TrackerMain {
     public static void main(String[] args) {
 
         // For now the collectorUrl runs on a docker container
-        String collectorUrl = "http://localhost:8080";
+        String collectorUrl = "http://localhost:80";
 
         Event osEvent = EventsUtils.getOsEvent();
 
@@ -26,11 +26,11 @@ public class TrackerMain {
                 .name("name")
                 .build();
 
-        ReportMetric.reportMetric(collectorUrl, "terasology", DevicePlatform.Desktop, screenEvent);
-        ReportMetric.reportMetric(collectorUrl, "terasology", DevicePlatform.Desktop, pageView);
+        //ReportMetric.reportMetric(collectorUrl, "terasology", DevicePlatform.Desktop, screenEvent);
+        //ReportMetric.reportMetric(collectorUrl, "terasology", DevicePlatform.Desktop, pageView);
 
         //if osEvent is not registered, this is a bad event in Elasticsearch
-        ReportMetric.reportMetric(collectorUrl, "terasology", DevicePlatform.Desktop, osEvent);
+        ReportMetric.reportMetric(collectorUrl, "terasology", DevicePlatform.Desktop, pageView);
 
 
     }

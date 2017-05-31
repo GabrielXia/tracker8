@@ -12,7 +12,7 @@
 
         <encoder charset="UTF-8" class="net.logstash.logback.encoder.LogstashEncoder" />
     </appender>
-
+    <!--
     <appender name="ASYNC-AER" class="ch.qos.logback.classic.AsyncAppender">
         <appender-ref ref="AER" />
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
@@ -20,6 +20,7 @@
         </filter>
         <neverBlock>true</neverBlock>
     </appender>
+    -->
 
     <root level="warn">  <!-- 设置日志级别 -->
         <appender-ref ref="STDOUT" />
